@@ -11,11 +11,20 @@ body {
 }
 
 header {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     padding: 15px 20px;
     border-bottom: 3px solid #443C34;
+}
+
+#logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 h1 {
@@ -30,6 +39,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
 }
@@ -58,6 +68,7 @@ section h2 {
     font-size: 1.1rem;
     color: #443C34;
     text-decoration: underline;
+    text-align: center;
     margin-bottom: 8px;
 }
 
@@ -66,4 +77,73 @@ section p {
     border-radius: 5px;
     padding: 15px;
     background-color: #fff8ee;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 25px;
+    border-top: 3px solid #443C34;
+    font-size: 0.85rem;
+    color: #443C34;
+}
+
+footer p {
+    margin: 0;
+}
+
+form {
+    border: 2px solid #443C34;
+    border-radius: 5px;
+    padding: 20px 25px;
+    background-color: #fff8ee;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #443C34;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px 10px;
+    border: 2px solid #443C34;
+    border-radius: 4px;
+    background-color: #FBF2E7;
+    color: #443C34;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #DEA64F;
+    background-color: #fff;
+}
+
+button[type="submit"] {
+    align-self: flex-start;
+    padding: 10px 25px;
+    background-color: #443C34;
+    color: #FBF2E7;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #DEA64F;
+    color: #443C34;
 }
